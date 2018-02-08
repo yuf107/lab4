@@ -9,11 +9,11 @@
 	color: #CC00AA;
 }
 
+/*
 .jumbotron {
-	position: relative;
+	position: relative; 
 	background: none;
 }
-
 .jumbotron:after {
      content:"";
      background: url("../images/lorempixel.jumbotron.jpeg");
@@ -23,13 +23,12 @@
      bottom: 0;
      right: 0;
      position: absolute;
-     z-index: -1;	
+     z-index: 0;	
 }
-
 .jumbotron p {
      color: #6e6e6e;
 }
-
 .project a {
      text-align: center;
 }
+*/

@@ -8,6 +8,7 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,35 +21,68 @@
 
 <body>
 	<div class="container">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
-		<div class="jumbotron">
-			<h1>Michael Bernstein</h1>
-			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
+		<div class="title">
+			<h1>ManageMotif</h1>
+			<!-- subtitle -->
 		</div>
 
-		<ol>
-			{{#each projects}}
-				<li><a href="#{{id}}">{{name}}</a></li>
-			{{/each}}
-		</ol>
+		<div class="topnav">
+			<input type="text" placeholder="Look up..">
+		</div>
 
-                <h4>Projects</h4>
+		<div>
+			<i class="fa fa-bell"></i>
+		</div>
 
-		{{#each projects}}
-			<div class="project" id="{{id}}">
-                        	<a href="project/{{name}}" class="thumbnail">
-                                	<img src="images/{{image}}" class="img">
-                                	<p>{{name}}</p>
-                        	</a>
-                	</div>
-		{{/each}}
+		<div>
+			<i class="fa fa-wheel"></i>
+		</div>
 
-		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+		<div class="button">
+			<a href="event2">
+				<h2>Event 2</h2>
+			</a>
+		</div>
 
+		<div class="button">
+			<a href="event1">
+				<h3>Event 1</h3>
+			</a>
+		</div>
+
+		<div class="button">
+			<a href="event3">
+				<h2>Event 3</h2>
+			</a>
+		</div>
+
+		<div>
+			<i class="fa fa-trash"></i>
+		</div>
+
+		<hr>
+
+		<div class="button">
+			<a href="add">
+				<h4>Create Event</h4>
+			</a>
+		</div>
+
+		<div class="button">
+			<a href="reminder">
+				<h5>Quick Reminder</h5>
+			</a>
+		</div>
+
+		<div>
+
+		<div>
+			<i class="fa fa-book"></i>
+				</div>
+			
 	</div>
+
+	
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
