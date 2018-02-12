@@ -1,10 +1,9 @@
-var fs = require('fs');
+var data = require('../data.json');
 
 exports.view = function(req, res){
-	res.render('add',{
-		'name':'event'
-	})
-
+	url = req.originalUrl;
+	res.render('add', data)
+	console.log(url);
 }
 
 
