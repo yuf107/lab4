@@ -11,6 +11,7 @@ var handlebars = require('express3-handlebars')
 var net = require('net');
 //var hello = require('./routes/hello');
 var add = require('./routes/add');
+var addEvent = require('./routes/addEvent');
 var index = require('./routes/index');
 var quickreminder = require('./routes/quickreminder')
 var event3 = require('./routes/event3')
@@ -47,6 +48,7 @@ app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/add', add.view);
 app.get('/index', index.view);
+app.get('/addEvent', addEvent.addEvent); // In add.js create addEvent function
 app.get('/quickreminder', quickreminder.view)
 app.get('/event3', event3.view)
 app.get('/event2', event3.view)

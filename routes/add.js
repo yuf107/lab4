@@ -7,6 +7,4 @@ exports.view = function(req, res){
 
 }
 
-function writeToTxt(){
-	console.log('1');
-}
+

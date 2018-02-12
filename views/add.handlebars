@@ -9,25 +9,22 @@
 	<div>
 		<h2>So what's on your mind now?</h2>
 
-		<h4>Event name:</h4>
-		<input>
-		</input>
+		<form method="get" action="/addEvent">
+			<h4>Event name:</h4>
+			<input id="name" name="name"></input>
 
-		<h4>Comments:</h4>
-		<form action="index">
-			<textarea name="event" rows="4" cols="50">Add comments for event</textarea>
+			<h4>Comments:</h4>
+
+			<h4>Time:</h4>
+			<input></input>
+			<input></input>
+
+			<h4>Location:</h4>
+			<input></input>
+			
+			<div><input type="submit" id="submit" class="btn btn-default"value="Add Event"></input></div>
+
 		</form>
-
-		<h4>Time:</h4>
-		<input></input>
-		<input></input>
-
-		<h4>Location:</h4>
-		<input></input>
-
-		<div><Button id="done" onclick="write_event">
-			<h3>Done</h3>
-		</Button></div>
 
 		<div><Button>
 			<h2>Invite Friends</h2>
