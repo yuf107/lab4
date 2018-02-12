@@ -9,7 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var net = require('net');
-var hello = require('./routes/hello');
+//var hello = require('./routes/hello');
 var add = require('./routes/add');
 var addEvent = require('./routes/addEvent');
 var index = require('./routes/index');
@@ -17,6 +17,7 @@ var quickreminder = require('./routes/quickreminder')
 var event3 = require('./routes/event3')
 var event2 = require('./routes/event3')
 var event1 = require('./routes/event3')
+var login = require('./routes/login');
 
 var app = express();
 var fs = require('fs');
@@ -42,9 +43,9 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', hello.view);
+app.get('/', index.view);
 
-app.get('/hello/:userName', hello.view);
+app.get('/login', login.view);
 app.get('/add', add.view);
 app.get('/index', index.view);
 app.get('/addEvent', addEvent.addEvent); // In add.js create addEvent function
