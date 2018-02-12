@@ -11,7 +11,12 @@ var handlebars = require('express3-handlebars')
 var net = require('net');
 var hello = require('./routes/hello');
 var add = require('./routes/add');
+var addEvent = require('./routes/addEvent');
 var index = require('./routes/index');
+var quickreminder = require('./routes/quickreminder')
+var event3 = require('./routes/event3')
+var event2 = require('./routes/event3')
+var event1 = require('./routes/event3')
 
 var app = express();
 var fs = require('fs');
@@ -42,7 +47,13 @@ app.get('/', hello.view);
 app.get('/hello/:userName', hello.view);
 app.get('/add', add.view);
 app.get('/index', index.view);
-//app.get('/add', add.addEvent); // In add.js create addEvent function
+app.get('/addEvent', addEvent.addEvent); // In add.js create addEvent function
+app.get('/quickreminder', quickreminder.view)
+app.get('/event3', event3.view)
+app.get('/event2', event3.view)
+app.get('/event1', event3.view)
+// Example route
+// app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
