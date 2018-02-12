@@ -68,6 +68,8 @@
 
 		<hr>
 
+		<div><button id="create">Create Event</button></div>
+
 		<div class="button">
 			<a href="add">
 				<h4>Create Event</h4>
@@ -88,9 +90,12 @@
 			
 	</div>
 
-	
-
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script>
+		$("#create").click(function(){
+			window.open("add?name=none", "_self", "null")
+		});
+	</script>
 </body>
 </html>
