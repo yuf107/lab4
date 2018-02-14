@@ -1,0 +1,28 @@
+section {
+	display: flex;
+        flex-wrap: wrap;	
+	height: 60%;
+	width: 100%;
+}
+
+#title {
+	height: 6%;
+	width: 100%;
+/*	background-color: #232323; */
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#grid {
+	background-color: #003c9e;
+	margin: 5px;
+}
+
+/*
+section::after {
+	flex-grow: 99999999;
+}
+*/
