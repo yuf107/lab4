@@ -23,7 +23,9 @@ var app = express();
 var fs = require('fs');
 
 // all environments
-app.set('port', process.env.PORT || 3000); // Switch back to 3000 later
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
