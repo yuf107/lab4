@@ -8,8 +8,6 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var net = require('net');
-//var hello = require('./routes/hello');
 var add = require('./routes/add');
 var addEvent = require('./routes/addEvent');
 var index = require('./routes/index');
@@ -20,12 +18,9 @@ var event1 = require('./routes/event3')
 var login = require('./routes/login');
 
 var app = express();
-var fs = require('fs');
 
 // all environments
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
@@ -61,9 +56,3 @@ app.get('/event1', event3.view)
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-
-function writeToTxt(){
-	var txt = app.getElementByIdSync("event").value();
-	console.log(txt);
-	console.log('1');
-};
