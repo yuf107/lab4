@@ -2,10 +2,10 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
 	url = req.originalUrl;
-	var name = url;
+//	var name = url;
 
-//	var name = url.substring(5,);
-//	name = name.replace(/%20/g, " ");
+	var name = url.substring(5,);
+	name = name.replace(/%20/g, " ");
 
 	var array = data.events;
 	var current_event = {};
