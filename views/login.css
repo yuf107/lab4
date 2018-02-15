@@ -1,34 +1,59 @@
-.body 
+body 
 {
 	margin: 0;
-	padding: 30px;
+	padding: 0;
+	background: url(Pictures/motif2.png);
+	background-size: cover;
 	font-family: sans-serif;
 }
 .title
 {
 	text-align:center;
-	padding:30px 0 20px;
+	padding:50px 0 20px;
 }
 .title h1{
 	margin: 0;
 	padding: 0;
 	color: #80ffe5;
-	font-size: 30px;
+	text-transform: uppercase;
+	font-size: 40px;
 }
 .container
 {
 	width: 80%;
-	height: 500px;
+	height: 600px;
+	background: #fff;
+	margin:0 auto;
+	border: 2px solid #fff;
 	box-shadow: 0 20px 50px rgba(0,0,0,.5);
+	opacity:0.9;
 
+}
+.container .left{
+	float: left;
+	width:30%;
+	height:600px;
+	background:url(Pictures/ManageMotif.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	box-sizing:border-box;
+}
+.container .right{
+	float: right;
+	width:70%;
+	height:600px;
+	box-sizing:border-box;
 }
 .formBox
 {
 	width:100%;
 	padding: 80px 40px;
 	border-box;
-	box-sizing: height:400px;
+	box-sizing: border-box;
+	height: 600px;
 	background: #fff;
+	font-size: 30px;
 }
 .formBox p
 {
@@ -39,6 +64,7 @@
 }
 .formBox input
 {
+	width:100%;
 	margin-bottom: 20px;
 
 }
@@ -48,10 +74,11 @@
 	border: none;
 	border-bottom: 4px solid #80ffe5;
 	outline:none;
-	height: 70px;
+	height: 50px;
+	font-size: 20px;
 }
 .formBox input[type="Name"]:focus,
-.formBox input[type="password"]:focus{
+.formBox input[type="Password"]:focus{
 	font-size: 10px;
 
 }
@@ -67,6 +94,7 @@
 	color: #fff;
 	background: #80ffe5;
 	cursor: pointer;
+	font-size: 30px;
 }
 .formBox input[type= "submit"]:hover
 {
@@ -81,7 +109,7 @@
 }
 .fa {
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
     width: 20px;
     text-align: center;
     text-decoration: none;
@@ -93,26 +121,27 @@
 .fa-facebook {
     background: #3B5998;
     color: white;
-    border-radius: 70%;
+    border-radius: 60%;
      position:relative;
 }
 .fa-twitter {
     background: #55ACEE;
     color: white;
-    border-radius:70%;
+    border-radius:60%;
      position:relative;
 }
 .fa-google-plus-circle {
-	font-size:50px;
+	
     width:20px;
     background: black;
     color: white;
-    border-radius:70%;
+    border-radius:60%;
      position:relative;
 }
-.fa-long-arrow-left{
+.fa-home{
 	color: #00cca3;
-	width:80px;
+	width: 100px;
+	height: 100px;
 	cursor: pointer;
 }
 .container h2{

@@ -1,3 +1,4 @@
+<!doctype html>
 
 <html>
 
@@ -5,43 +6,46 @@
 <meta charset = "utf-8">
 <title> login </title>
 <link rel="stylesheet" type="text/css" href="login.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
 	
-	<a href="index"> <i class="fa fa-long-arrow-left"> </i></a>
-	<img src="ManageMotif.png" height="10%" width="17%" position: relative >
-	<div class="title"><h1>Account</h> 
-			
-</div>
-	<div class="container"> 
-		<div class="formBox">
+	<a href="index"> <i class="fa fa-home"> </i></a>
+	<div class="title"><h1>Account</h> </div>	
 
+	<div class="container"> 
+		<div class="left"></div>
+		<div class="right">
+			<div class="formBox">
+			<!--<img src="Pictures/user.png" class="user"> -->
 			<form>
 				<p>Username</p>
-				<input type="Name" name="" placeholder="ManageMotif">
+				<input type="Name" name="" placeholder="siri@managemotif.com">
 				<p>Password</p>
 				<input type="Password" name="" placeholder="・・・・・・">
 				<br>
-				<input type="submit" name ="" value="Sign in">
-				<a href="index">"<class sign in></a>
-				<a href= "#"> Forget Password</a>
-				<br>
+
+				<div class="signin">
+				<a href="index.handlebars">
+				<input type="submit" value="Sign in"> 
+				</a>
+			</div>
+				<!--<a href="index">"<class=sign in></a>-->
+				<a href= "#"> Forget Password </a>
+
 				<input type="submit" name ="" value="Sign up" >
-				<h2>-----Or log in through-----</h2>
+
+				<h2>------Or log in through------</h2>
 				<br>
 				<i class="fa fa-google-plus-circle"></i>
 				<i class="fa fa-facebook"></i>
 				<i class="fa fa-twitter"></i>
-
-				
-			</form>
 			
+			</form>
 		</div>
-
-
 	</div>
 	</body>
 <html>
