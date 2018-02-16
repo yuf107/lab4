@@ -1,8 +1,3 @@
-
-
 exports.view = function(req, res){
-	res.render('Login',{
-		'name':'password'
-	})
-
+	res.render('login',{})
 }
