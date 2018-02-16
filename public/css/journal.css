@@ -2,7 +2,7 @@ body
 {
 	margin: 0;
 	padding: 0;
-	background: url(Pictures/motif2.png);
+	background: url(/images/motif2.png);
 	background-size: cover;
 	font-family: sans-serif;
 }

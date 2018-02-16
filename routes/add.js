@@ -6,6 +6,7 @@ exports.view = function(req, res){
 
 	var name = url.substring(5,);
 	name = name.replace(/%20/g, " ");
+	name = name.replace(/%27/g, "'");
 
 	var array = data.events;
 	var current_event = {};
