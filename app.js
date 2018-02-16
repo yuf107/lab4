@@ -6,16 +6,16 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var add = require('./routes/add');
 var journal = require('./routes/journal');
 var addEvent = require('./routes/addEvent');
 var index = require('./routes/index');
-var quickreminder = require('./routes/quickreminder')
-var event3 = require('./routes/event3')
-var event2 = require('./routes/event3')
-var event1 = require('./routes/event3')
+var quickreminder = require('./routes/quickreminder');
+var event3 = require('./routes/event3');
+var event2 = require('./routes/event3');
+var event1 = require('./routes/event3');
 var login = require('./routes/login');
 
 var app = express();
