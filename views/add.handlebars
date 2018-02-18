@@ -16,9 +16,12 @@
 			<h4>Comments:</h4>
 			<input name="comment" placeholder="{{comment}}"></input>			
 
+			<h4>Date:</h4>
+			<input type="date" name="date" placeholder="{{date}}"></input>
 			<h4>Time:</h4>
-			<input name="timeFrom" placeholder="{{timeFrom}}"></input>
-			<input name="timeTo" placeholder="{{timeTo}}"></input>
+			<input type="time" name="timeFrom" placeholder="{{timeFrom}}"></input>
+			<input type="time" name="timeTo" placeholder="{{timeTo}}"></input>
+
 
 			<h4>Location:</h4>
 			<input name="place" placeholder="{{place}}"></input>
@@ -29,6 +32,16 @@
 				<option value="32">Two Star</option>
 				<option value="48">Three Star</option>
 			</select>
+		</br>
+			<form action="add.handlebars" method="post" enctype="multipart/form-data">
+				<!--<label for="file"> Choose a photo:</label>
+					<input type="file" name="file1"/>
+					<input type="submit" value="Use photo!"/>-->
+		<!--	<h4>Choose photo</h4>
+			<form name="uploaded">
+				<input type="file" size="25" accept="image/*">
+				<input type="Submit"></form>-->
+				
 			<div>
 				<input type="submit" id="submit" class="btn btn-default"value="Add Event"></input>
 			
