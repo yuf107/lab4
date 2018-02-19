@@ -8,15 +8,16 @@ exports.view = function(req, res){
 	name = name.replace(/%20/g, " ");
 	name = name.replace(/%27/g, "'");
 
-	var array = data.events;
+	var rows = data.events;
 	var current_event = {};
 
-	for (var i = 0; i < array.length; i++) {
-		console.log(name);
-		console.log(array[i].name);
-		if (name.valueOf() == array[i].name.valueOf()){
-			console.log("1");
-			current_event = array[i];
+	for (var i = 0; i < rows.length; i++) {
+		var events = rows[i];
+
+		for (j = 0; j < events.length; j++){
+			if (name.valueOf() == events[j].name.valueOf()){
+				current_event = events[i];
+			}
 		}
 	}
 
