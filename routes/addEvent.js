@@ -8,10 +8,19 @@ exports.addEvent = function(req, res) {
 		"timeTo": req.query.timeTo,
 		"place": req.query.place,
 		"importance": req.query.importance};
-//        data.events.push(newEvent);
 
-	console.log(data.events[0].row.length);
-
-	console.log(data);
+	for (var j = 0; j < 3; j++){
+		var length = 0;
+		for (var i = 0; i < data.events[j].row.length; i++){
+			length += parseInt(data.events[j].row[i].importance);
+		}
+	
+		console.log(length);
+	
+		if (length + parseInt(req.query.importance) < 100){
+			data.events[j].row.push(newEvent);
+			break;
+		}
+	}
 }
 

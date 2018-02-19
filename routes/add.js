@@ -14,7 +14,7 @@ exports.view = function(req, res){
 	for (var i = 0; i < rows.length; i++) {
 		var events = rows[i];
 
-		for (j = 0; j < events.length; j++){
+		for (var j = 0; j < events.length; j++){
 			if (name.valueOf() == events[j].name.valueOf()){
 				current_event = events[i];
 			}
