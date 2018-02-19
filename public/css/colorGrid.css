@@ -5,13 +5,15 @@ body
         background: url(/images/motif2.png);
         background-size: cover;
         font-family: sans-serif;
+	height: 100%;
+	width: 100%;
 }
 
-section {
+.flex-container {
 	display: flex;
-        flex-wrap: wrap;	
-	height: 60%;
+	height: 19%;
 	width: 100%;
+	font-size: 0;
 }
 
 #title {
@@ -26,12 +28,11 @@ html, body {
 }
 
 #grid {
-	background-color: #00cca3;
-	margin: 5px;
+	background-color: #00a1f1;
+	margin: 3px;
+	height: 95%;
 }
 
-/*
 section::after {
 	flex-grow: 99999999;
 }
-*/

@@ -44,15 +44,18 @@ White space above title
 			<i class="fa fa-wheel"></i>
 		</div -->
 	
-		<section>
 		{{#each events}}
-			<div id="grid" style="height:47%; width:{{importance}}%">
+		<div class="flex-container">
+		{{#each row}}
+			<div id="grid" style="width:{{importance}}%">
 				<a href="add?{{name}}">
 					<h2 style="color:white">{{name}}</h2>
 				</a>
 			</div>
 		{{/each}}
-		</section>
+		</div>
+		{{/each}}
+		
 
 		<!-- div>
 			<i class="fa fa-trash"></i>

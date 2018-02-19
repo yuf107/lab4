@@ -8,7 +8,10 @@ exports.addEvent = function(req, res) {
 		"timeTo": req.query.timeTo,
 		"place": req.query.place,
 		"importance": req.query.importance};
-        data.events.push(newEvent);
+//        data.events.push(newEvent);
+
+	console.log(data.events[0].row.length);
+
 	console.log(data);
 }
 
