@@ -2,7 +2,6 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
 	url = req.originalUrl;
-//	var name = url;
 
 	var name = url.substring(5,);
 	name = name.replace(/%20/g, " ");
@@ -10,16 +9,23 @@ exports.view = function(req, res){
 
 	var rows = data.events;
 	var current_event = {};
+	var edit = false;
 
 	for (var i = 0; i < rows.length; i++) {
-		var events = rows[i];
+		var events = rows[i].row;
 
 		for (var j = 0; j < events.length; j++){
 			if (name.valueOf() == events[j].name.valueOf()){
-				current_event = events[i];
+				current_event = events[j];
+				edit = true;
 			}
 		}
 	}
+
+	if (edit)
+		current_event["edit"] = "Edit Event";
+	else
+		current_event["edit"] = "Add Event";
 
 	res.render('add', current_event);
 	console.log(current_event);
