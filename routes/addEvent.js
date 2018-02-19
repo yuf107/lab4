@@ -15,8 +15,6 @@ exports.addEvent = function(req, res) {
 			length += parseInt(data.events[j].row[i].importance);
 		}
 	
-		console.log(length);
-	
 		if (length + parseInt(req.query.importance) < 100){
 			data.events[j].row.push(newEvent);
 			break;

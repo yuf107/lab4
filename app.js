@@ -11,6 +11,7 @@ var handlebars = require('express3-handlebars');
 var add = require('./routes/add');
 var journal = require('./routes/journal');
 var addEvent = require('./routes/addEvent');
+var editEvent = require('./routes/editEvent');
 var index = require('./routes/index');
 var quickreminder = require('./routes/quickreminder');
 var event3 = require('./routes/event3');
@@ -48,10 +49,11 @@ app.get('/login', login.view);
 app.get('/add', add.view);
 app.get('/index', index.view);
 app.get('/addEvent', addEvent.addEvent); // In add.js create addEvent function
-app.get('/quickreminder', quickreminder.view)
-app.get('/event3', event3.view)
-app.get('/event2', event3.view)
-app.get('/event1', event3.view)
+app.get('/quickreminder', quickreminder.view);
+app.get('/event3', event3.view);
+app.get('/event2', event3.view);
+app.get('/event1', event3.view);
+app.get('/editEvent', editEvent.editEvent);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

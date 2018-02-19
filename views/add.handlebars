@@ -13,31 +13,36 @@
 		<div class="title">
 			<a href="index">
 				<img src="/images/backbutton.png" alt="back" width="24" height="30" ></a>
-				<h2>Add Event</h2></div>
+				<h2>Add or Edit Event</h2></div>
 <div align="center">
 		<div class="container"> 
-		<form method="get" action="/addEvent">
+		<form method="get" action="{{action}}">
+
 			<h4>Event name:</h4>
-			<input name="name" placeholder="{{name}}"></input>
+			<h5>{{message}}</h5>
+			<input name="name" value="{{name}}" {{readonly}}>
+				<!-- h6 style="display:inline">{{message}}</h6-->
+			</input>
+
 			<h4>Comments:</h4>
-			<input name="comment" placeholder="{{comment}}"></input>			
+			<input name="comment" value="{{comment}}"></input>	
 			<h4>Date:</h4>
-			<input type="date" name="date" placeholder="{{date}}"></input>
+			<input type="date" name="date" value="{{date}}"></input>
 			<h4>Time:</h4>
-			<input type="time" name="timeFrom" placeholder="{{timeFrom}}"></input>
+			<input type="time" name="timeFrom" value="{{timeFrom}}"></input>
 			to
-			<input type="time" name="timeTo" placeholder="{{timeTo}}"></input>
+			<input type="time" name="timeTo" value="{{timeTo}}"></input>
 			<h4>Location:</h4>
-			<input name="place" placeholder="{{place}}"></input>
+			<input name="place" value="{{place}}"></input>
 			<h4>Importance:</h4>
-			<select name="importance">
+			<select name="importance" value="{{importance}}">
 				<option value="32">One Star</option>
 				<option value="48">Two Star</option>
 				<option value="65">Three Star</option>
 			</select>
 		</br>
-			<form action="add.handlebars" method="post" enctype="multipart/form-data">
-				<!--<label for="file"> Choose a photo:</label>
+			<!-- form action="add.handlebars" method="post" enctype="multipart/form-data">
+				<label for="file"> Choose a photo:</label>
 					<input type="file" name="file1"/>
 					<input type="submit" value="Use photo!"/>-->
 		<!--	<h4>Choose photo</h4>
@@ -58,5 +63,4 @@
 	</div>
 </div>	
 </body>
-
 </html>

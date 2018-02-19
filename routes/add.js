@@ -22,10 +22,16 @@ exports.view = function(req, res){
 		}
 	}
 
-	if (edit)
+	if (edit){
 		current_event["edit"] = "Edit Event";
-	else
+		current_event["action"] = "/editEvent";
+		current_event["message"] = "To change name, delete and add another event";
+		current_event["readonly"] = "readonly";
+	}
+	else{
 		current_event["edit"] = "Add Event";
+		current_event["action"] = "/addEvent";
+	}
 
 	res.render('add', current_event);
 	console.log(current_event);
