@@ -9,7 +9,7 @@ exports.editEvent = function(req, res) {
                 "place": req.query.place,
                 "importance": req.query.importance};
 
-	var name = req.query.name;
+	var name = req.query.original;
 	var rows = data.events;
 
         for (var i = 0; i < rows.length; i++) {
