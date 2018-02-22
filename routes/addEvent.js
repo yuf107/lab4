@@ -13,6 +13,20 @@ exports.addEvent = function(req, res) {
 		newEvent["importance"] = 32;
 	}
 
+        var name = req.query.name;
+        var rows = data.events;
+
+	for (var i = 0; i < rows.length; i++) {
+                var events = rows[i].row;
+                
+                for (var j = 0; j < events.length; j++){
+                        if (name.valueOf() == events[j].name.valueOf()){
+                        	console.log("Event already exist.")
+				return;
+			}       
+                }       
+        }
+
 	for (var j = 0; j < 3; j++){
 		var length = 0;
 		for (var i = 0; i < data.events[j].row.length; i++){
