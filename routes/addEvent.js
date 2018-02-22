@@ -20,7 +20,7 @@ exports.addEvent = function(req, res) {
 		}
 	
 		if (length + parseInt(newEvent["importance"]) < 100){
-			console.log("something");
+			data.events[j].row.push(newEvent);
 			break;
 		}
 	}
