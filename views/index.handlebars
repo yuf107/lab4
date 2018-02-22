@@ -65,16 +65,15 @@ White space above title
 
 		<div><button id="create"><h4>Create Event</h4></button></div>
 
-		<div class="button">
-			<a href="quickreminder">
-				<h5>Quick Reminder</h5>
-			</a>
-		</div>
+		<div class=""><form method="get" action="/addEvent">
+			<input name="name" placeholder="Quick Reminder"></input>
+			<input type="submit" value="OK"></input>
+		</form></div>
 
 		<div>
 
 		<div>
-			<i class="fa fa-book"> </i>
+			<i class="fa fa-book"></i>
 			<a href="journal">Journal</a>
 		</div>
 			
@@ -86,6 +85,10 @@ White space above title
 		$("#create").click(function(){
 			window.open("add", "_self", "null")
 		});
+	</script>
+
+	<script>
+		
 	</script>
 </body>
 </html>

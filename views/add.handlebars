@@ -10,9 +10,9 @@
 
 <body>
 	
-		<div class="title">
-			<a href="index">
-				<img src="/images/backbutton.png" alt="back" width="24" height="30" ></a>
+	<div class="title">
+		<a href="index">
+			<img src="/images/backbutton.png" alt="back" width="24" height="30" ></a>
 				<h2>Add or Edit Event</h2></div>
 <div align="center">
 		<div class="container"> 
@@ -21,8 +21,14 @@
 			<h4>Event name:</h4>
 			<h5>{{message}}</h5>
 			<input name="name" value="{{name}}" {{readonly}}>
-				<!-- h6 style="display:inline">{{message}}</h6-->
 			</input>
+
+			<h4>Importance:</h4>
+                        <select name="importance" value="{{importance}}">
+                                <option value="32">One Star</option>
+                                <option value="48">Two Star</option>
+                                <option value="65">Three Star</option>
+                        </select>
 
 			<h4>Comments:</h4>
 			<input name="comment" value="{{comment}}"></input>	
@@ -34,12 +40,6 @@
 			<input type="time" name="timeTo" value="{{timeTo}}"></input>
 			<h4>Location:</h4>
 			<input name="place" value="{{place}}"></input>
-			<h4>Importance:</h4>
-			<select name="importance" value="{{importance}}">
-				<option value="32">One Star</option>
-				<option value="48">Two Star</option>
-				<option value="65">Three Star</option>
-			</select>
 		</br>
 			<!-- form action="add.handlebars" method="post" enctype="multipart/form-data">
 				<label for="file"> Choose a photo:</label>
@@ -51,16 +51,32 @@
 				<input type="Submit"></form>-->
 		<div style="text-align:center;">
 		<input type="submit" id="submit" class="btn btn-default" value="{{edit}}" style="width:80%"></input> <!-- One button switch text -->
-		
+		</form>	
+	
 		<!-- Button class="btn"style="width:80%">Edit Event</Button -->
 
 		</br>
 		<Button class="btn1">Invite Friends </Button>
 		</br>
 		<Button class="btn2">Archive </Button>
-		<Button class="btn3">Delete </Button>
+
+		<button class="btn3" id="delete">Delete </button>
+
+		<!-- form action="{{delete}}" style="display:inline"> 
+			<input type="submit" class="btn3" value="Delete"></input>
+		</form -->
+		
 		</div>
 	</div>
-</div>	
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+	// var http = require("http");
+	$("#delete").click( function(){
+		console.log("Delete clicked");
+		$("http").get('/delete', {name: "ak47"})
+	});	
+</script>
 </body>
 </html>

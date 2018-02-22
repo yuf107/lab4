@@ -27,6 +27,7 @@ exports.view = function(req, res){
 		current_event["action"] = "/editEvent";
 		current_event["message"] = "To change name, delete and add another event";
 		current_event["readonly"] = "readonly";
+		current_event["delete"]="/Delete";
 	}
 	else{
 		current_event["edit"] = "Add Event";
