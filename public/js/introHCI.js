@@ -9,5 +9,34 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// add any functionality and listeners you want here
+	$('.project a').click(addProjectDetails);
+
+	$('#colorBtn').click(randomizeColors);
 }
+
+/*
+ * Make an AJAX call to retrieve project details and add it in
+ */
+function addProjectDetails(e) {
+	// Prevent following the link
+	e.preventDefault();
+
+	// Get the div ID, e.g., "project3"
+	var projectID = $(this).closest('.project').attr('id');
+	// get rid of 'project' from the front of the id 'project3'
+	var idNumber = projectID.substr('project'.length);
+
+	$.get("/project/" + idNumber, newProject);
+
+	console.log("User clicked on project " + idNumber);
+}
+
+function newProject(result) {
+	$("#project" + result.id + " .details").html('<img src="' + result['image'] + '" class="detailsImage">' +
+												 '<p>' + result['title'] + '</p>' +
+												 '<p>' + result['date'] + '</p>' +
+												 '<p>' + result['summary'] + '</p></a>');
+
+}
+
+

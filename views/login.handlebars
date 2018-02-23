@@ -45,14 +45,18 @@
 				<input type="submit" name ="" value="Sign up" >
 
 				<h2>------Or log in through------</h2>
-				<br>
-				<i class="fa fa-google-plus-circle"></i>
-				<i class="fa fa-facebook"></i>
-				<i class="fa fa-twitter"></i>
-			
+	
 			</form>
+
+			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 	</body>
 <html>
 
