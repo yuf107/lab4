@@ -7,11 +7,17 @@
 			},
 			{
 				"name": "Best Friend's Birthday",
-				"importance": "32"
+				"importance": "48"
 			}]
 		},
 		{"row":
-			[{
+			[{	"name": "Work out",
+				"importance": "32"
+			},
+			{	"name": "Family meeting",
+				"importance": "32"
+			},
+			{
 				"name": "And more ...",
 				"importance": "32"
 			}]

@@ -11,6 +11,7 @@ body
 
 .flex-container {
 	display: flex;
+	flex-wrap: wrap;
 	height: 19%;
 	width: 100%;
 	font-size: 0;
@@ -33,10 +34,6 @@ html, body {
 	height: 95%;
 }
 
-section::after {
-	flex-grow: 99999999;
-}
-
 input {
 	display: inline;
 }
@@ -57,7 +54,7 @@ input {
 
 #qrBox {
 	width: 78%;
-	height: 80px;
+	height: 60px;
 }
 
 #qrButton {
@@ -71,5 +68,5 @@ input {
     border-radius: 8px;
     left-margin: 10px;
     right-margin: 10px;
-	height: 80px;
+	height: 60px;
 }
