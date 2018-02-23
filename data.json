@@ -12,14 +12,14 @@
 		},
 		{"row":
 			[{	"name": "Work out",
-				"importance": "32"
+				"importance": "31"
 			},
 			{	"name": "Family meeting",
-				"importance": "32"
+				"importance": "31"
 			},
 			{
 				"name": "And more ...",
-				"importance": "32"
+				"importance": "31"
 			}]
 		},
 		{"row":[]}
