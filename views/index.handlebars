@@ -32,18 +32,6 @@ White space above title
 			</a>
 		</div>
 
-		<!-- div class="topnav">
-			<input type="text" placeholder="Look up..">
-		</div>
-
-		<div>
-			<i class="fa fa-bell"></i>
-		</div>
-
-		<div>
-			<i class="fa fa-wheel"></i>
-		</div -->
-	
 		{{#each events}}
 		<div class="flex-container">
 		{{#each row}}
@@ -65,9 +53,13 @@ White space above title
 
 		<div><button id="create"><h4>Create Event</h4></button></div>
 
-		<div class=""><form method="get" action="/addEvent">
-			<input name="name" placeholder="Quick Reminder"></input>
-			<input type="submit" value="OK"></input>
+		<div><h2>
+		</h2><div>
+
+		<div style="height:20%">
+		<form method="get" action="/addEvent">
+			<input id="qrBox" name="name" placeholder="Quick Reminder"></input>
+			<input id="qrButton" type="submit" value="OK"></input>
 		</form></div>
 
 		<div>
@@ -87,8 +79,5 @@ White space above title
 		});
 	</script>
 
-	<script>
-		
-	</script>
 </body>
 </html>
