@@ -16,6 +16,11 @@ exports.addEvent = function(req, res) {
         var name = req.query.name;
         var rows = data.events;
 
+	if (name.replace(/ /g, "") == ""){
+		console.log("Cannot create event without name");
+		return;
+	}
+
 	for (var i = 0; i < rows.length; i++) {
                 var events = rows[i].row;
                 

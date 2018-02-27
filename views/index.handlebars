@@ -41,14 +41,12 @@ White space above title
 		<div class="flex-container">
 		{{#each row}}
 			<div id="grid" style="width:{{importance}}%">
-				<a href="add?{{name}}">
-					<h4 style="color:white">{{name}}</h4>
-					<!--user input date-->
-					<h5 style="color:white">Date:</h5>
-					<!--user input date-->
-					<h6 style="color:white">Time:</h6>
-					<h7 style="color:white">Location:</h7>
 
+				<a href="add?{{name}}">
+			<h3 style="color:white">{{name}}</h3>
+			<h5 style="color:white">Date: {{date}}<h5>
+			<h5 style="color:white">Time: {{timeFrom}} {{timeTo}}<h5>
+			<h6 style="color:white">Location: {{place}}</h6>
 				</a>
 			</div>
 		{{/each}}
