@@ -5,20 +5,22 @@ body {
 	background-size: cover;
 	font-family: sans-serif;
 	color: #00a1f1
+	height: 100% 
 }
+
 .title img{
 	text-align: left;
 }
 .title h2{
 	text-align:center;
-	padding:50px 0 20px;
+	padding:20px 0 20px;
 	font-size: 30px;
 	color: #00a1f1;
 }
 .container
 {
 	width: 90%;
-	height: 90%;
+	height: 98%;
 	background: #fff;
 	margin:0 auto;
 	border: 2px solid #fff;
