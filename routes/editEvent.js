@@ -20,5 +20,7 @@ exports.editEvent = function(req, res) {
 				events[j] = newEvent;                        	
 			}
                 }
-	} // Rearrange events if possible 
+	}
+
+	return res.redirect('/index');
 }

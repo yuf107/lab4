@@ -24,5 +24,7 @@ exports.deleteEvent = function(req, res){
 	for (var j = J + 1; j < data.events[I].row.length; j++){
 		newArray.push(data.events[I].row[j]);
 	}
+	
 	data.events[I].row = newArray;
+	return res.redirect('/index');
 }

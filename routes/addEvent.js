@@ -18,7 +18,7 @@ exports.addEvent = function(req, res) {
 
 	if (name.replace(/ /g, "") == ""){
 		console.log("Cannot create event without name");
-		return;
+		return;  // Think about the return for empty event name
 	}
 
 	for (var i = 0; i < rows.length; i++) {
@@ -43,5 +43,7 @@ exports.addEvent = function(req, res) {
 			break;
 		}
 	}
+
+	return res.redirect('/index');
 }
 
