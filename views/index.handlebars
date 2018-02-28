@@ -12,30 +12,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<!-- 
-Todos:
-Find space and insert
-Text format for each events
-Color to use: orange for happy maybe?
-White space above title
--->
-
 <body>
 	<div class="container-fluid" style="height: 100%; width: 100%">
-	<a href="login">
-		<div class="Signup">
-		<img src="/images/user.png" alt="Icon" style = "width:30px;height:30px;"><br>
-				<font size="2">Account</font>
-		</div>
-	</a>
-		<!--<div id="title">
-		<center><h2>ManageMotif</h2></center>
-		</div>-->
-		<div id = "logo" style="display:inline;">
-		<center><img src="/images/ManageMotif.png" alt="Icon" style = "width:180px;height:130px;"></center>
-		</div>		
 
-<div class="container"> 
+<div class="container">
+
+	<a href="login"><div style="display:inline; float:left; background-color: white">
+                <img src="/images/user.png" alt="Icon" style = "width:30px;height:30px"><br>
+                                <font size="2">Account</font>
+        </div></a>
+                <center><img src="/images/ManageMotif.png" alt="Icon" style = "width:135px;height:98px;"></center>
+ 
 	<br>
 		{{#each events}}
 		<div class="flex-container">
