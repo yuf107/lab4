@@ -12,41 +12,26 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<!-- 
-Todos:
-Find space and insert
-Text format for each events
-Color to use: orange for happy maybe?
-White space above title
--->
-
 <body>
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		
-		<div id="title">
-		<center>
-			<h2>ManageMotif</h2></center>
-		</div>
 
-		<div class="Signup">
-			<a href="login">
-				<h5>Login</h5>
-			</a>
-		</div>
+
+<div class="container">
+
+	<a href="login"><div style="display:inline; float:left; background-color: white">
+                <img src="/images/user.png" alt="Icon" style = "width:30px;height:30px"><br>
+                                <font size="2">Account</font>
+        </div></a>
+                <center><img src="/images/ManageMotif.png" alt="Icon" style = "width:135px;height:98px;"></center>
+ 
+	<br>
+	<font size="3" color="#00a1f1">Your Events on Board!</font>
 
 		{{#each events}}
 			
 		<div class="flex-container">
 		
 		{{#each row}}
-			
-			<div id="grid" style="width:{{importance}}%">
-
-				<a href="add?{{name}}">
-					
-					<h4 style="color:white">{{name}}</h4>
-
-				</a>
 
 			</div>
 		
@@ -55,21 +40,12 @@ White space above title
 		</div>
 			
 		{{/each}}
-		
-		<hr>
+		<br>
+	</div>	
 
-		<div>
 
-		<button id="create"><h4>Create Event</h4></button></div>
-
-		<div>
-
-			<h3>
-						
-			</h3>
-			
-		<div>
-
+		<div><button id="create"><h4>Create Event</h4></button></div>
+		<br>
 		<div style="height:20%">
 
 		<form method="get" action="/addEvent">

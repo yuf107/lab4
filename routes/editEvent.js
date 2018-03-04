@@ -1,13 +1,34 @@
 var data = require('../data.json');
 
 exports.editEvent = function(req, res) {
+	var name = req.query.name;
+	if (name.replace(/ /g, "") == ""){
+                console.log("Cannot create event without name");
+                return res.redirect('/index');
+        }
+
+	var color = "";
+        var rand = Math.random();
+
+        if(req.query.happy){
+                color = "#f65314";
+        }
+        else if(rand > 0.5){
+                color = "blue";
+        }
+        else{
+                color = "#00a1f1";
+        }
+
 	var newEvent = {"name": req.query.name,
                 "comment": req.query.comment,
                 "date": req.query.date,
                 "timeFrom": req.query.timeFrom,
                 "timeTo": req.query.timeTo,
                 "place": req.query.place,
-                "importance": req.query.importance};
+                "importance": req.query.importance,
+		"color": color
+	};
 
 	var name = req.query.original;
 	var rows = data.events;
@@ -20,5 +41,7 @@ exports.editEvent = function(req, res) {
 				events[j] = newEvent;                        	
 			}
                 }
-	} // Rearrange events if possible 
+	}
+
+	return res.redirect('/index');
 }

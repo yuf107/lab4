@@ -1,26 +1,8 @@
 {
 	"events": 
-		[{"row":	
-			[{
-				"name": "Job Interview",
-				"importance": "48"
-			},
-			{
-				"name": "Best Friend's Birthday",
-				"importance": "48"
-			}]
+		[{"row":[]	
 		},
-		{"row":
-			[{	"name": "Work out",
-				"importance": "31"
-			},
-			{	"name": "Family meeting",
-				"importance": "31"
-			},
-			{
-				"name": "And more ...",
-				"importance": "31"
-			}]
+		{"row":[]
 		},
 		{"row":[]}
 		]		

@@ -1,13 +1,28 @@
 var data = require('../data.json');
 
 exports.addEvent = function(req, res) {
+	var color = "";
+	var rand = Math.random();
+
+	if(req.query.happy){
+		color = "#f65314";
+	}
+	else if(rand > 0.5){
+		color = "blue";
+	}
+	else{
+		color = "#00a1f1";
+	}
+
         newEvent = {"name": req.query.name,
 		"comment": req.query.comment,
 		"date": req.query.date,
 		"timeFrom": req.query.timeFrom,
 		"timeTo": req.query.timeTo,
 		"place": req.query.place,
-		"importance": req.query.importance};
+		"importance": req.query.importance,
+		"color": color
+	};
 
 		console.log("adding event!");
 	if (!newEvent["importance"]){
@@ -17,6 +32,12 @@ exports.addEvent = function(req, res) {
 	//rows
         var name = req.query.name;
         var rows = data.events;
+
+	if (name.replace(/ /g, "") == ""){
+		console.log("Cannot create event without name");
+		return res.redirect('/index');  
+		// Think about the return for empty event name
+	}
 
 	for (var i = 0; i < rows.length; i++) {
             
@@ -42,5 +63,7 @@ exports.addEvent = function(req, res) {
 			break;
 		}
 	}
+
+	return res.redirect('/index');
 }
 

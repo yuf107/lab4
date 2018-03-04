@@ -17,11 +17,16 @@
 	<!-- a href="index"> <i class="fa fa-home"> </i>
 		<h4>Back</h4>
 	</a -->
-	<div class="title"><h1>ManageMotif</h1> </div>	
+	<div class="title">
+		<h1>ManageMotif</h1>
+
+		<div class="quotes">
+		<p>Manage your time with cool motif!</p>
+		<p>--- Life is simple,but we insist on making it complicated.</p>
+	</div>
+ </div>	
 
 	<div class="container"> 
-		<div class="left"></div>
-		<div class="right">
 			<div class="formBox">
 			<!--<img src="Pictures/user.png" class="user"> -->
 				<p>Username</p>
@@ -31,26 +36,26 @@
 				<br>
 
 				<div class="signin">
-				<a href="index">
+				<a href="add">
 				<input type="submit" value="Sign in"></input>
 				</a>
-
-				<a href="index">
-					<p style="font-size: 24px; color: #80ffe5">Skip and Go to Main Page</p>
-				</a>
+				
 			</div>
 				<!--<a href="index">"<class=sign in></a>-->
-				<a href= "index"> Forget Password </a>
-				<a href= "index">
+				<a href= "add"> Forget Password </a>
+				<a href= "add">
 				<input type="submit" name ="" value="Sign up" >
 				</a>
-
-				<h2>------Or log in through------</h2>
+				<a href="add">
+					<center><p style="font-size: 18px; color: #00a1f1">Skip and Add My Event!</p></center>
+				</a>
+				<br>
+				<h2>--------Or log in through--------</h2>
 	
 			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 			</fb:login-button>
 		</div>
-	</div>
+
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>

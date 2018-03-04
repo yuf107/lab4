@@ -1,9 +1,11 @@
 body
 {
-        margin: 0;
-        padding: 0;
-        background: url(/images/motif2.png);
-        background-size: cover;
+        margin: 2;
+        padding: 5px;
+       //background-color:#e6ffff;
+        //background: linear-gradient(-90deg, #e6ffff, #fff);
+        background: url(/images/motif2.jpg);
+        background-size:auto;
         font-family: sans-serif;
 	height: 100%;
 	width: 100%;
@@ -12,16 +14,24 @@ body
 .flex-container {
 	display: flex;
 	flex-wrap: wrap;
+    justify-content:center;
 	height: 19%;
 	width: 100%;
 	font-size: 0;
 }
+.container{
+    width: 100%;
+    height: auto;
+    margin:0 auto;
+    border: 2px solid #fff;
+    opacity:0.9;
 
-#title {
+}
+
+/* #title {
 	height: 6%;
 	width: 100%;
-/*	background-color: #232323; */
-}
+	background-color: #232323; */
 
 html, body {
 	height: 100%;
@@ -29,9 +39,10 @@ html, body {
 }
 
 #grid {
-	background-color: #00a1f1;
-	margin: 3px;
+	margin: 2px;
 	height: 95%;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    text-align: left;
 }
 
 input {
@@ -39,27 +50,30 @@ input {
 }
 
 #create {
-    background-color: grey;
+    background-color: #00a1f1;
     /* border: none; */
     color: white;
     padding: 10px 30px;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 8px;
     width: 100%;
     left-margin: 10px;
     right-margin: 10px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+
 }
 
 #qrBox {
 	width: 78%;
 	height: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
 }
 
 #qrButton {
 	width: 20%;
-	background-color: grey;
+	background-color: #00a1f1;
     	color: white;
     	padding: 10px 30px;
    	text-align: center;
@@ -69,4 +83,5 @@ input {
     	left-margin: 10px;
     	right-margin: 10px;
 	height: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
 }

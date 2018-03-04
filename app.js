@@ -19,6 +19,8 @@ var event2 = require('./routes/event3');
 var event1 = require('./routes/event3');
 var login = require('./routes/login');
 var deleteEvent = require('./routes/delete');
+var calendar = require('./routes/calendar');
+
 
 var app = express();
 
@@ -56,6 +58,7 @@ app.get('/event2', event3.view);
 app.get('/event1', event3.view);
 app.get('/editEvent', editEvent.editEvent);
 app.get('/delete', deleteEvent.deleteEvent);
+app.get('/calendar', calendar.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
