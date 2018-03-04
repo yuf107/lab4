@@ -22,8 +22,10 @@ White space above title
 
 <body>
 	<div class="container-fluid" style="height: 100%; width: 100%">
+		
 		<div id="title">
-		<center><h2>ManageMotif</h2></center>
+		<center>
+			<h2>ManageMotif</h2></center>
 		</div>
 
 		<div class="Signup">
@@ -33,25 +35,43 @@ White space above title
 		</div>
 
 		{{#each events}}
+			
 		<div class="flex-container">
+		
 		{{#each row}}
+			
 			<div id="grid" style="width:{{importance}}%">
+
 				<a href="add?{{name}}">
+					
 					<h4 style="color:white">{{name}}</h4>
+
 				</a>
+
 			</div>
+		
 		{{/each}}
+
 		</div>
+			
 		{{/each}}
 		
 		<hr>
 
-		<div><button id="create"><h4>Create Event</h4></button></div>
+		<div>
 
-		<div><h3>
-		</h3><div>
+		<button id="create"><h4>Create Event</h4></button></div>
+
+		<div>
+
+			<h3>
+						
+			</h3>
+			
+		<div>
 
 		<div style="height:20%">
+
 		<form method="get" action="/addEvent">
 			<input id="qrBox" name="name" placeholder="Type to Add Quick Reminder"></input>
 			<input id="qrButton" type="submit" value="OK"></input>
@@ -72,5 +92,8 @@ White space above title
 		});
 	</script>
 
+	<link rel="stylesheet" href="/css/introHCI.css">
+	<script src="js/googleMaps.js"></script>
+	{{> googleMaps}}
 </body>
 </html>

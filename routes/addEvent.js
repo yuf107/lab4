@@ -9,21 +9,25 @@ exports.addEvent = function(req, res) {
 		"place": req.query.place,
 		"importance": req.query.importance};
 
+		console.log("adding event!");
 	if (!newEvent["importance"]){
 		newEvent["importance"] = 32;
 	}
-
+	//name
+	//rows
         var name = req.query.name;
         var rows = data.events;
 
 	for (var i = 0; i < rows.length; i++) {
-                var events = rows[i].row;
+            
+            var events = rows[i].row;
                 
                 for (var j = 0; j < events.length; j++){
                         if (name.valueOf() == events[j].name.valueOf()){
                         	console.log("Event already exist.")
-				return;
-			}       
+						
+							return;
+						}       
                 }       
         }
 
