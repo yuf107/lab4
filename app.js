@@ -60,6 +60,21 @@ app.get('/editEvent', editEvent.editEvent);
 app.get('/delete', deleteEvent.deleteEvent);
 app.get('/calendar', calendar.view);
 
+
+var confirmation = require('./routes/confirmation');
+app.post('/confirmRequest', confirmation.addMessage);
+
+//ROUTES FOR POST REQUEST.
+// Add routes here
+//app.get('/', index.view);
+//ADMIN VIEW INSIDE RSVP
+//app.get('/rsvp', rsvp.adminView);
+//RSVP POST IN addRSVP
+//app.post('/addRSVP', rsvp.addRSVP);
+
+
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

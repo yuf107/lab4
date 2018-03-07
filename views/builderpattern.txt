@@ -1,0 +1,80 @@
+//Builder pattern
+
+
+//1. Abstrac out the similarities
+//subroutine the components, build car, build tire.... into abstract, then force the implementation.... so extends....
+//2. the constructor calls inside the constructor can be the independent methods.
+//
+
+public abstract class AbstractCarBuilder{
+
+
+	private ITire tire;
+	private IEngine engine;
+
+		//set???
+	
+		public void setEngine(){}
+
+		public void setTire(){}
+
+		public Car buildCar(){}
+
+ 
+}
+
+public class CarBuilder extends AbstractCarBuilder{
+	
+
+	public void setEngine(){
+
+		tire = aTire;
+
+	}
+
+	public void setTire(){
+
+		engine = aEngine;
+
+	}
+
+	public Car buildCar(){
+
+		return new Car(tire != null ? tire : new Tire(), eng != null ? eng  new Engine());
+
+	}
+
+}
+
+
+
+
+//Call the setters, then build the car accordingly.
+
+
+//setEngine(new Engine());... Then BuildCar.
+
+
+//Decorator pattern
+
+
+public abstract class Reader{
+	
+
+
+}
+
+
+public abstract class WordReader{
+	
+
+
+}
+
+public class DecoratorWordReader extends Reader{
+	
+	private Reader;
+
+	abstract public static char Char
+
+}
