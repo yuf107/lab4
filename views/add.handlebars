@@ -11,7 +11,7 @@
 <body>
 	
 	<div class="title">
-		<a href="index" onclick="backClick()">
+		<a href="/index" onclick="backClick()">
 			<img src="/images/backbutton.png" alt="back" width="24" height="30" style="display:inline; float:left"></img>
 		</a>
 		<h2>Add or Edit Event</h2></div>
@@ -54,14 +54,6 @@
 			<div><h3>
 			</h3></div>
 
-			<!-- form action="add.handlebars" method="post" enctype="multipart/form-data">
-				<label for="file"> Choose a photo:</label>
-					<input type="file" name="file1"/>
-					<input type="submit" value="Use photo!"/>-->
-		<!--	<h4>Choose photo</h4>
-			<form name="uploaded">
-				<input type="file" size="25" accept="image/*">
-				<input type="Submit"></form>-->
 		<div style="text-align:center;">
 		<input type="submit" id="submit" class="btn btn-default" value="{{edit}}" style="width:80%"></input> <!-- One button switch text -->
 		</form>	
@@ -95,7 +87,17 @@
   gtag('config', '{{google}}');
 </script>
 <script>
-function backClick(){
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39570713-1', 'site.com');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function backClick(){ 
 	ga("create", "back", "auto");
         ga("send", "event", "back", "click");
         console.log("Back Clicked");
