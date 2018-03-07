@@ -1,4 +1,11 @@
-var data = require('../data.json');
+var versionIsA = require('../version.json').versionIsA;
+
+if (versionIsA){
+        var data = require('../dataA.json');
+}
+else{
+        var data = require('../dataB.json');
+}
 
 exports.view = function(req, res){
 	url = req.originalUrl;
@@ -31,6 +38,13 @@ exports.view = function(req, res){
 	else{
 		current_event["edit"] = "Add Event";
 		current_event["action"] = "/addEvent";
+	}
+
+	if (versionIsA){
+		current_event["google"] = "UA-115090949-1";
+	}
+	else{
+		current_event["google"] = "UA-115307697-1";
 	}
 
 	res.render('add', current_event);

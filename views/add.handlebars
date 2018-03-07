@@ -15,7 +15,7 @@
 <body>
 	
 	<div class="title">
-		<a href="index">
+		<a href="index" onclick="backClick()">
 			<img src="/images/backbutton.png" alt="back" width="24" height="30" style="display:inline; float:left"></img>
 		</a>
 		<h2>Add or Edit Event</h2>
@@ -86,12 +86,30 @@
 		</div>
 	</div>
 </div>
+
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="js/add.js"></script>
 <script>
 	$(".btn btn-default").click(function(e){
 		$("#submit").value = "Event added"
 	});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115090949-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{google}}');
+</script>
+<script>
+function backClick(){
+	ga("create", "back", "auto");
+        ga("send", "event", "back", "click");
+        console.log("Back Clicked");
+}
 </script>
 </body>
 </html>

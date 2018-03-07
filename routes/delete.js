@@ -1,4 +1,11 @@
-var data = require('../data.json');
+var versionIsA = require('../version.json').versionIsA;
+
+if (versionIsA){
+        var data = require('../dataA.json');
+}
+else{
+        var data = require('../dataB.json');
+}
 
 exports.deleteEvent = function(req, res){
 	var name = req.query.name;
