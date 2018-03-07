@@ -40,6 +40,13 @@ exports.view = function(req, res){
 		current_event["action"] = "/addEvent";
 	}
 
+	if (versionIsA){
+		current_event["google"] = "UA-115090949-1";
+	}
+	else{
+		current_event["google"] = "UA-115307697-1";
+	}
+
 	res.render('add', current_event);
 	console.log(current_event);
 }
