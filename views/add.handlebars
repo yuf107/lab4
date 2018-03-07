@@ -11,7 +11,7 @@
 <body>
 	
 	<div class="title">
-		<a href="index">
+		<a href="index" onclick="backClick()">
 			<img src="/images/backbutton.png" alt="back" width="24" height="30" style="display:inline; float:left"></img>
 		</a>
 		<h2>Add or Edit Event</h2></div>
@@ -93,6 +93,13 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-115090949-1');
+</script>
+<script>
+function backClick(){
+	ga("create", "back", "auto");
+        ga("send", "event", "back", "click");
+        console.log("Back Clicked");
+}
 </script>
 </body>
 </html>
