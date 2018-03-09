@@ -7,20 +7,20 @@ body
 	padding: 0;
 	//background: url(/images/motif2.png);
 	background-size: cover;
-	font-family: sans-serif;
-	background: url(/images/calendarBackground1.jpg);
+	font-family: "Josefin Sans";
+	background: url(/images/calendar.jpg);
 }
 .title
 {
 	text-align:center;
 	padding:50px 0 20px;
 
+
 }
 .title h1{
 	margin: 0;
 	padding: 0;
-	//color: #80ffe5;
-	color:#fff;
+	color: #00a1f1;
 	font-size: 40px;
 	font-family: Charcoal;
  }
@@ -29,7 +29,7 @@ body
 .quotes{
 	margin:0 auto;
 	padding:0;
-	color:#fff;
+	color:#00a1f1;
 	font-size: 16px;
 	font-family: Comic Sans MS;
 	font-style: italic;
@@ -44,7 +44,7 @@ body
 	margin:0 auto;
 	border: 2px solid #fff;
 	box-shadow: 0 20px 50px rgba(0,0,0,.5);
-	opacity:0.9;
+	opacity:0.8;
 	box-sizing:border-box;
 }
 .formBox
