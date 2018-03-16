@@ -10,6 +10,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Josefin+Sans" />
 </head>
 
 <body>
@@ -17,16 +18,18 @@
 	<!-- a href="index"> <i class="fa fa-home"> </i>
 		<h4>Back</h4>
 	</a -->
-	<div class="title">
+	<div class="container"> 	
+
+		<div class="title">
 		<h1>ManageMotif</h1>
 
 		<div class="quotes">
 		<p>Manage your time with cool motif!</p>
-		<p>--- Life is simple,but we insist on making it complicated.</p>
+
 	</div>
  </div>	
 
-	<div class="container"> 
+
 			<div class="formBox">
 			<!--<img src="Pictures/user.png" class="user"> -->
 				<p>Username</p>
@@ -36,25 +39,25 @@
 				<br>
 
 				<div class="signin">
-				<a href="add">
+				<a href="{{indexOrAdd}}">
 				<input type="submit" value="Sign in"></input>
 				</a>
 				
 			</div>
 				<!--<a href="index">"<class=sign in></a>-->
-				<a href= "add"> Forget Password </a>
-				<a href= "add">
+				<a href= "{{indexOrAdd}}"> Forget Password </a>
+				<a href= "{{indexOrAdd}}">
 				<input type="submit" name ="" value="Sign up" >
 				</a>
-				<a href="add">
+				<a href="{{indexOrAdd}}">
 					<center><p style="font-size: 18px; color: #00a1f1">Skip and Add My Event!</p></center>
 				</a>
 				<br>
-				<h2>--------Or log in through--------</h2>
 	
-			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-			</fb:login-button>
+			<center><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button></center>
 		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>

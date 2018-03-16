@@ -1,4 +1,11 @@
-var data = require('../data.json');
+var versionIsA = require('../version.json').versionIsA;
+
+if (versionIsA){
+        var data = require('../dataA.json');
+}
+else{
+        var data = require('../dataB.json');
+}
 
 exports.editEvent = function(req, res) {
 	var name = req.query.name;
@@ -26,7 +33,7 @@ exports.editEvent = function(req, res) {
                 "timeFrom": req.query.timeFrom,
                 "timeTo": req.query.timeTo,
                 "place": req.query.place,
-                "importance": req.query.importance,
+                "importance": 32, 
 		"color": color
 	};
 
